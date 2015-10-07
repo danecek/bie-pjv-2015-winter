@@ -15,9 +15,10 @@ public class EvalPi {
         for (int i = 0; i < n; i++) {
             double x = Math.random();
             double y = Math.random();
-            ...
-        }
+            //...
 
+        }
+        return 0;
     }
 
     /**
@@ -28,7 +29,7 @@ public class EvalPi {
         int n = 1000;
         double pi = evalPi(n);
 
-        System.out.printf("Estimated PI for %d is %f", n, pi);
+        System.out.printf("Estimated PI for %d is %f\n", n, pi);
 
     }
 
