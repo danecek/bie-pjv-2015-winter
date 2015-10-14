@@ -11,14 +11,22 @@ package evalpi;
  */
 public class EvalPi {
 
+    static double distanceFromOrigin(double x, double y) {
+        return Math.sqrt(x * x + y * y);
+    }
+
     static double evalPi(int n) {
+        int k = 0;
         for (int i = 0; i < n; i++) {
             double x = Math.random();
             double y = Math.random();
-            //...
-
-        }
-        return 0;
+            double dist = distanceFromOrigin(x, y);
+            if (dist < 1) {
+                k++;
+            }
+        }        
+      //  return (double)k/n * 4;
+           return 4.0 * k/n;
     }
 
     /**
@@ -26,7 +34,7 @@ public class EvalPi {
      */
     public static void main(String[] args) {
 
-        int n = 1000;
+        int n = 10000000;
         double pi = evalPi(n);
 
         System.out.printf("Estimated PI for %d is %f\n", n, pi);
