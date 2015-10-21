@@ -11,7 +11,7 @@ package rectangles;
  */
 public class MyRectangle {
 
-    private MyPoint refPoint;
+    private final MyPoint refPoint;
 
     public MyRectangle(MyPoint refPoint, int width, int height) {
         this.refPoint = refPoint;
