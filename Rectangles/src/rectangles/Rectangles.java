@@ -10,16 +10,17 @@ package rectangles;
  * @author danecek
  */
 public class Rectangles {
-    
-    static boolean areCrossed(MyRectangle r1, MyRectangle r2) {
-        // ?????????????????????????????????
-    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        MyRectangle r1 = new MyRectangle(new MyPoint(0, 0), 10, 10);
+        MyRectangle r2 = new MyRectangle(new MyPoint(1, 1), 10, 10);
+        System.out.printf("%s crosses %s %b\n" , r1, r2, r1.cross(r2));
+        r1 = new MyRectangle(new MyPoint(20, 20), 10, 10);
+        r2 = new MyRectangle(new MyPoint(1, 1), 10, 10);
+        System.out.printf("%s crosses %s %b\n" , r1, r2, r1.cross(r2));
     }
     
 }
