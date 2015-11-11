@@ -20,7 +20,7 @@ public class Expressions {
         BinOp plus = new BinOp(Operation.PLUS, c2, c1);
         BinOp mlt = new BinOp(Operation.MLT, plus, new Const(3));
         System.out.println(mlt.eval());
-        System.out.println(mlt);
+        System.out.println(mlt); // (2+1)*3
 
     }
 

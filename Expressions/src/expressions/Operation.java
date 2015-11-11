@@ -7,17 +7,33 @@ package expressions;
 
 public enum Operation {
 
-    PLUS("+"), MINUS("-"), MLT("*"), DIV("/");
+    PLUS("+", 0), MINUS("-", 0), MLT("*", 1), DIV("/", 1);
 
-    String chars;
+    private String chars;
+    private int priority;
 
-    private Operation(String chars) {
+    private Operation(String chars, int priority) {
         this.chars = chars;
+        this.priority = priority;
     }
 
     @Override
     public String toString() {
+        return getChars();
+    }
+
+    /**
+     * @return the chars
+     */
+    public String getChars() {
         return chars;
+    }
+
+    /**
+     * @return the priority
+     */
+    public int getPriority() {
+        return priority;
     }
 
 }

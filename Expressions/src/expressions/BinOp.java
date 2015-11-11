@@ -1,6 +1,7 @@
 package expressions;
 
 public class BinOp extends Expression {
+
     Operation op;
     Expression left;
     Expression right;
@@ -22,11 +23,31 @@ public class BinOp extends Expression {
                 return left.eval() * right.eval();
             case DIV:
                 return left.eval() / right.eval();
-                default: return -1;
+            default:
+                return -1;
         }
+    }
+
+    private String enclose(String op) {
+        return "(" + op + ")";
     }
 
     @Override
     public String toString() {
-        return "(" + left.toString() +")"+ op + "(" + right.toString() +")"; }
+        String ls = left.toString();
+        if (left.priority() < priority()) {
+            ls = enclose(ls);
+        }
+        String rs = right.toString();
+        if (right.priority() < priority()) {
+            rs = enclose(rs);
+        }
+
+        return ls + op + rs;
+    }
+
+    @Override
+    public int priority() {
+        return op.getPriority();
+    }
 }

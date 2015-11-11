@@ -34,4 +34,9 @@ public class Const extends Expression {
         return value;
     }
 
+    @Override
+    public int priority() {
+        return Integer.MAX_VALUE;
+    }
+
 }
