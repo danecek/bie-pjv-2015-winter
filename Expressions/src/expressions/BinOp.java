@@ -2,9 +2,9 @@ package expressions;
 
 public class BinOp extends Expression {
 
-    Operation op;
-    Expression left;
-    Expression right;
+    private final Operation op;
+    private final Expression left;
+    private final Expression right;
 
     public BinOp(Operation op, Expression left, Expression right) {
         this.op = op;
@@ -42,7 +42,6 @@ public class BinOp extends Expression {
         if (right.priority() < priority()) {
             rs = enclose(rs);
         }
-
         return ls + op + rs;
     }
 

@@ -1,16 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package expressions;
 
 public enum Operation {
 
     PLUS("+", 0), MINUS("-", 0), MLT("*", 1), DIV("/", 1);
 
-    private String chars;
-    private int priority;
+    private final String chars;
+    private final int priority;
 
     private Operation(String chars, int priority) {
         this.chars = chars;
