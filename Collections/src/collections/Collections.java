@@ -5,6 +5,8 @@
  */
 package collections;
 
+import java.util.Iterator;
+
 /**
  *
  * @author danecek
@@ -21,13 +23,17 @@ public class Collections {
         System.out.println(b);
         b.add(23);
         System.out.println(b);
+        System.out.println("iteration");
+        for (Iterator<Object> i = b.iterator(); i.hasNext();) {
+            System.out.println(i.next());
+        }
         b.remove("aaa");
         System.out.println(b);
         b.remove(23);
         System.out.println(b);
         b.clear();
         System.out.println(b);
-        
+
     }
-    
+
 }

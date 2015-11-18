@@ -13,9 +13,9 @@ import java.util.Iterator;
  *
  * @author danecek
  */
-public class Bag implements Collection {
+public class Bag implements Collection<Object> {
 
-    private Object[] data;
+    Object[] data;
     private int size;
 
     public Bag(int maxSize) {
@@ -47,8 +47,8 @@ public class Bag implements Collection {
     }
 
     @Override
-    public Iterator iterator() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Iterator<Object> iterator() {
+        return new BagIterator(this);
     }
 
     @Override
