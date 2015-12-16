@@ -25,10 +25,10 @@ public class Controler extends Thread {
 
     @Override
     public void run() {
-        Random r = new Random();
-        for (int i = 0; i <100;i++) {
+        AnimationStep step = new AnimationStep(c);
+        for (;;) {
             try {
-                Platform.runLater(new RunnableImpl(c, i));
+                Platform.runLater(step);
                 Thread.sleep(100);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Controler.class.getName()).log(Level.SEVERE, null, ex);

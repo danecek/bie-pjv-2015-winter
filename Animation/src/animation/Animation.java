@@ -27,7 +27,7 @@ public class Animation extends Application {
         root.getChildren().add(c);
         //c.relocate(20, 20);
 
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root, 100, 50);
 
         primaryStage.setTitle("Moving point");
         primaryStage.setScene(scene);
