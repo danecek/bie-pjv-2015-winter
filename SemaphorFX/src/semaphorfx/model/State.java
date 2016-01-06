@@ -22,10 +22,10 @@ public abstract class State {
 
     protected Set<Color> colors;
 
-    public abstract void enter(SemaphorModel sm);
+    public abstract void leave(SemaphorModel sm);
 
-    public void leave(SemaphorModel sm) {
-    }
+//    public void leave(SemaphorModel sm) {
+//    }
 
     public Set<Color> getColors() {
         return colors;

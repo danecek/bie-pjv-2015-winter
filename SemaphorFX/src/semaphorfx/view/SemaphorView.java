@@ -26,7 +26,7 @@ public class SemaphorView extends VBox {
         fire();
     }
 
-    public void fire() {
+    public final void fire() {
         Set<Color> colors = semaphorModel.getState().getColors();
         for (Light l : lights) {
             l.setOn(colors.contains(l.getColor()));

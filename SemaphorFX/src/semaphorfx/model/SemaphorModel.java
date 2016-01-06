@@ -5,7 +5,6 @@
  */
 package semaphorfx.model;
 
-import semaphorfx.controller.Red2Yellow;
 import semaphorfx.view.SemaphorView;
 
 /**
@@ -22,7 +21,6 @@ public class SemaphorModel {
 
     public void next() {
         state.leave(this);
-        state.enter(this);
         semaphorView.fire();
     }
 

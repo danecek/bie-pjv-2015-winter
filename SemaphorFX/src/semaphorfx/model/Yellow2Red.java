@@ -3,12 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package semaphorfx.controller;
+package semaphorfx.model;
 
-import semaphorfx.controller.Red2Yellow;
 import javafx.scene.paint.Color;
-import semaphorfx.model.SemaphorModel;
-import semaphorfx.model.State;
 
 /**
  *
@@ -16,14 +13,14 @@ import semaphorfx.model.State;
  */
 public class Yellow2Red extends State {
 
-    static Yellow2Red instance = new Yellow2Red(Color.RED);
+    static Yellow2Red instance = new Yellow2Red();
 
-    public Yellow2Red(Color... colors) {
-        super(colors);
+    public Yellow2Red() {
+        super(Color.RED);
     }
 
     @Override
-    public void enter(SemaphorModel sm) {
+    public void leave(SemaphorModel sm) {
         sm.setState(Red2Yellow.instance);
     }
 

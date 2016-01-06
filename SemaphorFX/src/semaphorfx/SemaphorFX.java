@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import semaphorfx.controller.SemFXTask;
 import semaphorfx.controller.SemTask;
 import semaphorfx.model.SemaphorModel;
 import semaphorfx.view.SemaphorView;
@@ -24,7 +25,7 @@ import semaphorfx.view.SemaphorView;
  */
 public class SemaphorFX extends Application {
 
-    SemTask st;
+    Thread st;
 
     @Override
     public void start(Stage primaryStage) {
@@ -39,13 +40,13 @@ public class SemaphorFX extends Application {
 
         Button startBtn = new Button("Start");
         startBtn.setOnAction((ActionEvent event) -> {
-            st = new SemTask(model);
+            st = new Thread(new SemFXTask(model));// SemTask(model);
             st.start();
         });
         Button stopBtn = new Button("Stop");
         stopBtn.setOnAction((ActionEvent event) -> {
             if (st != null)
-            st.myStop();
+            st.stop();//myStop();
         });
         HBox btns = new HBox(startBtn, stopBtn, nextBtn);
         btns.setPadding(new Insets(5));
