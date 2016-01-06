@@ -15,7 +15,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import semaphorfx.controller.SemFXTask;
-import semaphorfx.controller.SemTask;
 import semaphorfx.model.SemaphorModel;
 import semaphorfx.view.SemaphorView;
 
@@ -60,15 +59,11 @@ public class SemaphorFX extends Application {
         primaryStage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         launch(args);
     }
 
-    private void myStop() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 
 }
