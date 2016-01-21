@@ -6,7 +6,6 @@
 package animation;
 
 /**
- *
  * @author danecek
  */
 public class Velocity {
@@ -35,5 +34,24 @@ public class Velocity {
 
     Velocity invertY() {
         return new Velocity(dx, -dy);
+    }
+
+    public Velocity invertX() {
+        return new Velocity(-dx, dy);
+    }
+
+    public Velocity up() {
+        return new Velocity(dx, -Math.abs(dy));
+    }
+    public Velocity down() {
+        return new Velocity(dx, Math.abs(dy));
+    }
+
+    public Velocity left() {
+        return new Velocity(-Math.abs(dx), dy);
+    }
+
+    public Velocity right() {
+        return new Velocity(Math.abs(dx), dy);
     }
 }
