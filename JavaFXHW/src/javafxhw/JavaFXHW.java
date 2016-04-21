@@ -8,7 +8,6 @@ package javafxhw;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -24,7 +23,7 @@ public class JavaFXHW extends Application {
     @Override
     public void start(Stage primaryStage) {
          txt = new Text("XXX");
-        Button btn = new Button("Say 'Hello World'");
+        Button btn = new Button("Current date!");
 
         btn.setOnAction(new HandlerOfMyButton());
         
