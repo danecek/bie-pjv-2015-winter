@@ -17,7 +17,7 @@ import javafx.scene.shape.Circle;
  */
 public class Controler extends Thread {
 
-    Circle c;
+    private Circle c;
 
     public Controler(Circle c) {
         this.c = c;
@@ -37,4 +37,7 @@ public class Controler extends Thread {
 
     }
 
+    public Circle getC() {
+        return c;
+    }
 }

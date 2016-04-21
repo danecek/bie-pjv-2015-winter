@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Dec 21 15:25:07 CET 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0151-c4ed-f470-000006e8cb48 
+on database directory /home/users/d/danecek/Vyuka/bie-pjv-2015-winter/DBTest/PersonDB with class loader sun.misc.Launcher$AppClassLoader@15db9742 
+Loaded from file:/home/users/d/danecek/Vyuka/bie-pjv-2015-winter/DBTest/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_65-b17
+user.dir=/home/users/d/danecek/Vyuka/bie-pjv-2015-winter/DBTest
+os.name=Linux
+os.arch=amd64
+os.version=4.2.1-aufs-UCEBNY-b142-fw-ard-01
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
