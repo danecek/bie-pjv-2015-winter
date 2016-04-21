@@ -30,6 +30,12 @@
 /Animation/build/
 /Animation/dist/
 /ClientServer/nbproject/private/
-/SemaphorFX/build/
-/SemaphorFX/dist/
-/SemaphorFX/nbproject/private/
+/DBTest/nbproject/private/
+/DBTest/build/
+/DBTest/dist/
+/Semaphor/nbproject/private/
+/Semaphor/build/
+/Semaphor/dist/
+/SemaphorMVC/nbproject/private/
+/SemaphorMVC/build/
+/SemaphorMVC/dist/
